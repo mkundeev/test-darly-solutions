@@ -24,3 +24,6 @@ export const TableRow = styled.tr`
     color: ${COLORS.white};
   }
 `;
+export const Anchor = styled.div`
+  height: 50px;
+`;
