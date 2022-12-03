@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from "react";
-import { IContacts } from "../../types/data.types";
-import TableRow from "../TableRow";
+import React from "react";
 import { useTable } from "../../hooks/useTable.hook";
+import TableRow from "../TableRow";
+import { IContacts } from "../../types/data.types";
 import * as Styled from "./Table.styled";
 
 interface IProps {
