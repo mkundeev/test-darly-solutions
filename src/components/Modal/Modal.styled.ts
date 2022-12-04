@@ -16,6 +16,7 @@ export const CloseIcon = styled(CloseOutline)`
 
 export const Title = styled.h2`
   text-align: center;
+  margin-bottom: ${SPACES.m};
 `;
 
 export const BackDrop = styled.div`
@@ -28,9 +29,8 @@ export const Modal = styled.div`
   top: ${SPACES.xxxl};
   transform: translateX(-50%);
   left: 50%;
-  padding: ${SPACES.m};
+  padding: ${SPACES.m} ${SPACES.xxxl};
   border-radius: 1rem;
-  min-width: 500px;
   min-height: 500px;
   background-color: ${COLORS.white};
 `;

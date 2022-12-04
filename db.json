@@ -1,39 +1,16 @@
 {
   "contacts": [
     {
-      "id": "5",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "6",
-      "name": "Jhon",
+      "name": "Max",
       "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "7",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
+      "phone": "(111) 111-1111",
+      "email": "test2@mail.ua",
+      "status": "job",
+      "surename": "Max"
     },
     {
       "id": "8",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "9",
       "name": "Jhon",
       "surname": "Smith",
       "phone": "0936666666",
@@ -221,6 +198,14 @@
       "email": "test1@test.com",
       "status": "",
       "id": "K-l9XbO"
+    },
+    {
+      "name": "Max",
+      "surename": "Max",
+      "phone": "+38(063) 539-13-89",
+      "email": "test3@test.com",
+      "status": "job",
+      "id": "pQVOqXd"
     }
   ]
 }

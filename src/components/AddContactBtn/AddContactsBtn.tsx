@@ -7,7 +7,7 @@ interface IProps {
 export default function AddContactsBtn({ onClick }: IProps) {
   return (
     <div>
-      <Styled.AddContactBtn onClick={onClick} />
+      <Styled.AddContactBtn onClick={onClick} data-tip="Add new contact" />
     </div>
   );
 }

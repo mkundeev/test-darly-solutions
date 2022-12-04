@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export interface IPropsFlexContainer {
   justifyContent?: string;
@@ -6,6 +6,7 @@ export interface IPropsFlexContainer {
   alignItems?: string;
   marginTop?: string;
   gap?: string;
+  width?: string;
 }
 
 export const FlexContainer = styled.div<IPropsFlexContainer>`
@@ -15,4 +16,5 @@ export const FlexContainer = styled.div<IPropsFlexContainer>`
   flex-direction: ${(p) => p.flexDirection};
   align-items: ${(p) => p.alignItems};
   margin-top: ${(p) => p.marginTop};
+  width: ${(p) => p.width};
 `;

@@ -11,6 +11,7 @@ export default function FlexContainer({
   flexDirection,
   gap,
   marginTop,
+  width
 }: IProps) {
   return (
     <Styled.FlexContainer
@@ -19,6 +20,7 @@ export default function FlexContainer({
       flexDirection={flexDirection}
       gap={gap}
       marginTop={marginTop}
+      width={width}
     >
       {children}
     </Styled.FlexContainer>

@@ -4,15 +4,18 @@ import { Formik, Form } from "formik";
 import FormInput from "../FormInput";
 import Button from "../Button";
 import { FlexContainer } from "../FlexContainer/FlexContainer.styled";
-import { SPACES } from "../../theam";
+import { SPACES, FORM } from "../../theam";
 import { IContact } from "../../types/data.types";
 import contactsSevice from "../../apiService/contactsService";
 import { editeContactValidation } from "../../validation/editeContactValidation";
 import { ContactContext } from "../../context/ContactContext";
+import { initialValue } from "../../utils/formInitialValue";
+import { ModalContext } from "../../context/ModalContext";
 
 export default function EditeContactsForm() {
   const queryClient = useQueryClient();
   const { contact } = useContext(ContactContext);
+  const { close } = useContext(ModalContext);
 
   const mutation = useMutation({
     mutationFn: (data: { id: string; contact: Partial<IContact> }) =>
@@ -22,16 +25,11 @@ export default function EditeContactsForm() {
 
   const onSubmit = (value: Partial<IContact>) => {
     if (contact.id) mutation.mutate({ id: contact.id, contact: value });
+    close();
   };
   return (
     <Formik
-      initialValues={{
-        name: "",
-        surename: "",
-        phone: "",
-        email: "",
-        status: "",
-      }}
+      initialValues={initialValue}
       validationSchema={editeContactValidation}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         onSubmit(values);
@@ -45,6 +43,7 @@ export default function EditeContactsForm() {
             flexDirection="column"
             gap={SPACES.m}
             alignItems="center"
+            width={FORM.formWidth}
           >
             <FormInput
               name="name"

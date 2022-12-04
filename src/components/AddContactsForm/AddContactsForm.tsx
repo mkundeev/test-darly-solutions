@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { Formik, Form } from "formik";
 import FormInput from "../FormInput";
 import Button from "../Button";
 import { FlexContainer } from "../FlexContainer/FlexContainer.styled";
-import { SPACES } from "../../theam";
+import { SPACES, FORM } from "../../theam";
 import { IContact } from "../../types/data.types";
 import contactsSevice from "../../apiService/contactsService";
 import { addContactValidation } from "../../validation/addContactValidation";
+import { initialValue } from "../../utils/formInitialValue";
+import { ModalContext } from "../../context/ModalContext";
 
 export default function AddContactsForm() {
   const queryClient = useQueryClient();
+  const { close } = useContext(ModalContext);
 
   const mutation = useMutation({
     mutationFn: (contact: Omit<IContact, "id">) =>
@@ -20,17 +23,12 @@ export default function AddContactsForm() {
 
   const onSubmit = (value: Omit<IContact, "id">) => {
     mutation.mutate(value);
+    close();
   };
 
   return (
     <Formik
-      initialValues={{
-        name: "",
-        surename: "",
-        phone: "",
-        email: "",
-        status: "",
-      }}
+      initialValues={initialValue}
       validationSchema={addContactValidation}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         onSubmit(values);
@@ -44,6 +42,7 @@ export default function AddContactsForm() {
             flexDirection="column"
             gap={SPACES.m}
             alignItems="center"
+            width={FORM.formWidth}
           >
             <FormInput name="name" title="Name" type="text" />
             <FormInput name="surename" title="Surename" type="text" />

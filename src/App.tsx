@@ -10,19 +10,18 @@ import Modal from "./components/Modal";
 import { SPACES } from "./theam";
 import { MODAL } from "./const";
 import AddContactBtn from "./components/AddContactBtn";
+import ReactTooltip from "react-tooltip";
 
 function App() {
-  const { contacts, isLoading, isError, fetchNextPage } = useApp();
-  const { open, modal, close } = useContext(ModalContext);
-  const openAddModal = () => {
-    open(MODAL.add);
-  };
+  const { contacts, isLoading, isError, fetchNextPage, openAddContact } =
+    useApp();
+  const { modal, close } = useContext(ModalContext);
   return (
     <Container>
       {contacts && (
         <FlexContainer gap={SPACES.m}>
           <Table data={contacts} fetchNextPage={fetchNextPage} />
-          <AddContactBtn onClick={openAddModal} />
+          <AddContactBtn onClick={openAddContact} />
         </FlexContainer>
       )}
       {isLoading && <div>Loading...</div>}
@@ -37,6 +36,7 @@ function App() {
           <EditeContactsForm />
         </Modal>
       )}
+      <ReactTooltip effect="solid" arrowColor="transparent" place="bottom" />
     </Container>
   );
 }

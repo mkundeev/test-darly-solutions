@@ -1,5 +1,6 @@
 import { useRef, useEffect, useMemo, useCallback } from "react";
 import { IContact } from "../types/data.types";
+import ReactTooltip from "react-tooltip";
 
 export const useTable = (data: IContact[], fetchNextPage: () => void) => {
   const containerRef = useRef(null);
@@ -24,6 +25,7 @@ export const useTable = (data: IContact[], fetchNextPage: () => void) => {
   useEffect(() => {
     const observer = new IntersectionObserver(callBack, options);
     if (containerRef.current) observer.observe(containerRef.current);
+    ReactTooltip.rebuild();
     return () => {
       if (containerRef.current) observer.unobserve(containerRef.current);
     };

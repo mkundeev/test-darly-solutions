@@ -39,8 +39,8 @@ export default function TableRow({ item }: IProps) {
       <td>{item.status}</td>
       <td>
         <FlexContainer gap={SPACES.s}>
-          <Styled.SettingBtn onClick={openModal} />
-          <Styled.DeleteBtn onClick={handleDelete} />
+          <Styled.SettingBtn onClick={openModal} data-tip="Edite contact" />
+          <Styled.DeleteBtn onClick={handleDelete} data-tip="Delete contact" />
         </FlexContainer>
       </td>
     </>
