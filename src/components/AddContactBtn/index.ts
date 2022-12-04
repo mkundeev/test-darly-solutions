@@ -1,1 +1,1 @@
-export { default } from "./AddContactBtn";
+export { default } from "./AddContactsBtn";

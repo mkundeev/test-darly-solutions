@@ -8,7 +8,6 @@ export const SettingBtn = styled(SettingsOutline)`
   width: auto;
   border: 1px solid ${COLORS.black};
   border-radius: 4px;
-  cursor: pointer;
   &:hover {
     color: ${COLORS.white};
     background-color: ${COLORS.primary};
@@ -16,7 +15,6 @@ export const SettingBtn = styled(SettingsOutline)`
 `;
 
 export const DeleteBtn = styled(Delete)`
-  cursor: pointer;
   height: 32px;
   width: auto;
   border: 1px solid ${COLORS.black};

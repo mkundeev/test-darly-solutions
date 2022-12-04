@@ -19,10 +19,6 @@ export const TableRow = styled.tr`
   &:nth-child(2n + 1) {
     background-color: ${COLORS.ligthGrey};
   }
-  &:hover {
-    background-color: ${COLORS.primary};
-    color: ${COLORS.white};
-  }
 `;
 export const Anchor = styled.div`
   height: 50px;

@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ModalState } from "./context/ModalContext";
+import { ContactState } from "./context/ContactContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -25,7 +26,9 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ModalState>
-        <App />
+        <ContactState>
+          <App />
+        </ContactState>
       </ModalState>
     </QueryClientProvider>
   </React.StrictMode>

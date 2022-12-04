@@ -12,3 +12,6 @@ export const Error = styled.div`
 export const Input = styled(Field)`
   width: 240px;
 `;
+export const Info = styled.p`
+  margin-bottom: ${SPACES.s};
+`;

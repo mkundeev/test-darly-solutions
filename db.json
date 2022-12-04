@@ -1,37 +1,6 @@
 {
   "contacts": [
     {
-      "id": "1",
-      "name": "Jhon",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "2",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "3",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "4",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "5",
       "name": "Jhon",
       "surname": "Smith",
@@ -222,14 +191,6 @@
       "status": "friend"
     },
     {
-      "id": "29",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "30",
       "name": "Jhon",
       "surname": "Smith",
@@ -246,22 +207,6 @@
       "id": "S2yPua-"
     },
     {
-      "name": "Max",
-      "surename": "Max",
-      "phone": "(111) 111-1111",
-      "email": "test1@test.com",
-      "status": "job",
-      "id": "oJvVznG"
-    },
-    {
-      "name": "Eden Clements",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test1@test.com",
-      "status": "job",
-      "id": "KkhhdyX"
-    },
-    {
       "name": "max",
       "surename": "Max",
       "phone": "+38(063) 539-13-89",
@@ -270,28 +215,12 @@
       "id": "BNVIwMN"
     },
     {
-      "name": "Max",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test3@test.com",
-      "status": "",
-      "id": "x3pgE7N"
-    },
-    {
       "name": "Eden Clements",
       "surename": "Max",
       "phone": "+38(063) 539-13-89",
       "email": "test1@test.com",
       "status": "",
       "id": "K-l9XbO"
-    },
-    {
-      "name": "max",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test1@test.com",
-      "status": "job",
-      "id": "CdH3Sqs"
     }
   ]
 }

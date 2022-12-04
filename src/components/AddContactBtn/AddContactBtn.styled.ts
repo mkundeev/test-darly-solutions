@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { AddCircle } from "@styled-icons/fluentui-system-regular";
 import { COLORS } from "../../theam";
 
-const AddContactBtn = styled(AddCircle)`
+export const AddContactBtn = styled(AddCircle)`
   height: 38px;
   width: auto;
   cursor: pointer;
@@ -12,5 +12,3 @@ const AddContactBtn = styled(AddCircle)`
     background-color: ${COLORS.primary};
   }
 `;
-
-export default AddContactBtn;

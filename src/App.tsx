@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import Container from "./components/Container";
 import FlexContainer from "./components/FlexContainer";
 import Table from "./components/Table";
-import ContactsForm from "./components/ContactsForm/ContactsForm";
+import AddContactsForm from "./components/AddContactsForm";
+import EditeContactsForm from "./components/Edite/EditeContactsForm";
 import { useApp } from "./hooks/useApp.hook";
 import { ModalContext } from "./context/ModalContext";
 import Modal from "./components/Modal";
@@ -28,12 +29,12 @@ function App() {
       {isError && <div>Error</div>}
       {modal === MODAL.add && (
         <Modal title="Add contact" onClose={close}>
-          <ContactsForm />
+          <AddContactsForm />
         </Modal>
       )}
       {modal === MODAL.update && (
-        <Modal title="Title" onClose={close}>
-          <div>Update</div>
+        <Modal title="Update contact" onClose={close}>
+          <EditeContactsForm />
         </Modal>
       )}
     </Container>
