@@ -5,6 +5,8 @@ import { useQueryClient, useMutation } from "react-query";
 import contactsSevice from "../apiService/contactsService";
 import { IContact } from "../types/data.types";
 import deleteProperty from "../utils/deleteProperty";
+import { toast } from "react-toastify";
+import { QUERY } from "../const";
 export const useEditeContact = () => {
   const queryClient = useQueryClient();
   const { contact } = useContext(ContactContext);
@@ -13,7 +15,13 @@ export const useEditeContact = () => {
   const mutation = useMutation({
     mutationFn: (data: { id: string; contact: Partial<IContact> }) =>
       contactsSevice.updateContact(data.id, data.contact),
-    onSuccess: () => queryClient.invalidateQueries("infinityContacts"),
+    onSuccess: () => {
+      queryClient.invalidateQueries(QUERY.contacts);
+      toast.success("Contact updated");
+    },
+    onError: () => {
+      toast.error("Error occurred while updating contact");
+    },
   });
 
   const onSubmit = (value: Partial<IContact>) => {

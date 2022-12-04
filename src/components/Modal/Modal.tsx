@@ -11,6 +11,7 @@ export default function Modal({ children, title, onClose }: ModalProps) {
   return (
     <Styled.BackDrop onClick={onClose}>
       <Styled.Modal
+        onClick={(e) => e.stopPropagation()}
         variants={flip}
         initial="hidden"
         animate="visible"

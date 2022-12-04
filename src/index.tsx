@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ModalState } from "./context/ModalContext";
 import { ContactState } from "./context/ContactContext";
+import "./index.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {

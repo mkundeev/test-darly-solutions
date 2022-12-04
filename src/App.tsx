@@ -12,6 +12,7 @@ import { MODAL } from "./const";
 import AddContactBtn from "./components/AddContactBtn";
 import { AnimatePresence } from "framer-motion";
 import ReactTooltip from "react-tooltip";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const { contacts, isLoading, isError, fetchNextPage, openAddContact } =
@@ -44,6 +45,7 @@ function App() {
         )}
       </AnimatePresence>
       <ReactTooltip effect="solid" arrowColor="transparent" place="bottom" />
+      <ToastContainer pauseOnHover={false} closeButton={false} />
     </Container>
   );
 }

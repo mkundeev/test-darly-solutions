@@ -1,22 +1,6 @@
 {
   "contacts": [
     {
-      "id": "15",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "16",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "17",
       "name": "max",
       "surname": "Smith",
@@ -104,14 +88,6 @@
       "status": "friend"
     },
     {
-      "name": "max",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test2@mail.ua",
-      "status": "",
-      "id": "BNVIwMN"
-    },
-    {
       "id": "31",
       "name": "Jhon",
       "phone": "0936666666",
@@ -165,6 +141,14 @@
       "email": "ropaxel@mailinator.com",
       "status": "Consequat Sit dolor",
       "id": "CbHKFr7"
+    },
+    {
+      "name": "max",
+      "surename": "Serina Cooper",
+      "phone": "+38(063) 539-13-89",
+      "email": "mkundeev@gmail.com",
+      "status": "test",
+      "id": "LSxzPjm"
     }
   ]
 }

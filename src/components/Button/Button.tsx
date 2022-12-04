@@ -17,7 +17,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      whileHover={{ scale: 1.1 }}
+      whileHover={!disabled ? { scale: 1.1 } : {}}
     >
       {title}
     </Styled.Button>
