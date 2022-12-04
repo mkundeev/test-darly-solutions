@@ -3,6 +3,7 @@ import FlexContainer from "../FlexContainer";
 import { useTableRow } from "../../hooks/useTableRow.hook";
 import { IContact } from "../../types/data.types";
 import { SPACES } from "../../theam";
+import { motion } from "framer-motion";
 import * as Styled from "./TableRow.styled";
 
 interface IProps {
@@ -19,8 +20,15 @@ export default function TableRow({ item }: IProps) {
       <td>{item.status}</td>
       <td>
         <FlexContainer gap={SPACES.s}>
-          <Styled.SettingBtn onClick={openModal} data-tip="Edite contact" />
-          <Styled.DeleteBtn onClick={handleDelete} data-tip="Delete contact" />
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Styled.SettingBtn onClick={openModal} data-tip="Edite contact" />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Styled.DeleteBtn
+              onClick={handleDelete}
+              data-tip="Delete contact"
+            />
+          </motion.div>
         </FlexContainer>
       </td>
     </>
