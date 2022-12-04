@@ -1,7 +1,7 @@
-export interface IContacts {
+export interface IContact {
   id: string;
   name: string;
-  surname: string;
+  surename: string;
   phone: string;
   email: string;
   status?: string;

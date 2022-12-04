@@ -1,11 +1,11 @@
 import React from "react";
 import { useTable } from "../../hooks/useTable.hook";
 import TableRow from "../TableRow";
-import { IContacts } from "../../types/data.types";
+import { IContact } from "../../types/data.types";
 import * as Styled from "./Table.styled";
 
 interface IProps {
-  data: IContacts[];
+  data: IContact[];
   fetchNextPage(): void;
 }
 export default function Table({ data, fetchNextPage }: IProps) {

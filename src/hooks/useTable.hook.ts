@@ -1,7 +1,7 @@
 import { useRef, useEffect, useMemo, useCallback } from "react";
-import { IContacts } from "../types/data.types";
+import { IContact } from "../types/data.types";
 
-export const useTable = (data: IContacts[], fetchNextPage: () => void) => {
+export const useTable = (data: IContact[], fetchNextPage: () => void) => {
   const containerRef = useRef(null);
   const callBack = useCallback(
     (entries: any) => {
@@ -24,6 +24,9 @@ export const useTable = (data: IContacts[], fetchNextPage: () => void) => {
   useEffect(() => {
     const observer = new IntersectionObserver(callBack, options);
     if (containerRef.current) observer.observe(containerRef.current);
+    return () => {
+      if (containerRef.current) observer.unobserve(containerRef.current);
+    };
   }, [data, fetchNextPage, options, callBack]);
 
   return { containerRef };

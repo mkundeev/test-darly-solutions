@@ -1,15 +1,27 @@
 import React from "react";
+import { useMutation, useQueryClient } from "react-query";
 import { Formik, Form } from "formik";
 import FormInput from "../FormInput";
 import Button from "../Button";
 import * as Yup from "yup";
 import { FlexContainer } from "../FlexContainer/FlexContainer.styled";
 import { SPACES } from "../../theam";
+import { IContact } from "../../types/data.types";
+import contactsSevice from "../../apiService/contactsService";
 
 export default function ContactsForm() {
-  const onSubmit = (values: {}) => {
-    console.log(values);
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: (contact: Omit<IContact, "id">) =>
+      contactsSevice.addContact(contact),
+    // onSuccess: () => queryClient.invalidateQueries("infinityContacts"),
+  });
+
+  const onSubmit = (value: Omit<IContact, "id">) => {
+    mutation.mutate(value);
   };
+
   return (
     <Formik
       initialValues={{
