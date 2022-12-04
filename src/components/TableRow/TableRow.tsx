@@ -12,6 +12,7 @@ export default function TableRow({ item }: IProps) {
       <td>{item.surname}</td>
       <td>{item.email}</td>
       <td>{item.phone}</td>
+      <td>{item.status}</td>
       <td>Buttons</td>
     </>
   );
