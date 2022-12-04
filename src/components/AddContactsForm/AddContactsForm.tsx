@@ -1,30 +1,15 @@
-import React, { useContext } from "react";
-import { useMutation, useQueryClient } from "react-query";
+import React from "react";
 import { Formik, Form } from "formik";
 import FormInput from "../FormInput";
 import Button from "../Button";
-import { FlexContainer } from "../FlexContainer/FlexContainer.styled";
-import { SPACES, FORM } from "../../theam";
-import { IContact } from "../../types/data.types";
-import contactsSevice from "../../apiService/contactsService";
+import FlexContainer from "../FlexContainer";
 import { addContactValidation } from "../../validation/addContactValidation";
 import { initialValue } from "../../utils/formInitialValue";
-import { ModalContext } from "../../context/ModalContext";
+import { useAddContact } from "../../hooks/useAddContact.hook";
+import { SPACES, FORM } from "../../theam";
 
 export default function AddContactsForm() {
-  const queryClient = useQueryClient();
-  const { close } = useContext(ModalContext);
-
-  const mutation = useMutation({
-    mutationFn: (contact: Omit<IContact, "id">) =>
-      contactsSevice.addContact(contact),
-    onSuccess: () => queryClient.invalidateQueries("infinityContacts"),
-  });
-
-  const onSubmit = (value: Omit<IContact, "id">) => {
-    mutation.mutate(value);
-    close();
-  };
+  const { onSubmit } = useAddContact();
 
   return (
     <Formik

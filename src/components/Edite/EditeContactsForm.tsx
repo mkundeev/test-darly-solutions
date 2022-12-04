@@ -1,32 +1,16 @@
-import React, { useContext } from "react";
-import { useMutation, useQueryClient } from "react-query";
+import React from "react";
 import { Formik, Form } from "formik";
 import FormInput from "../FormInput";
 import Button from "../Button";
 import { FlexContainer } from "../FlexContainer/FlexContainer.styled";
 import { SPACES, FORM } from "../../theam";
-import { IContact } from "../../types/data.types";
-import contactsSevice from "../../apiService/contactsService";
 import { editeContactValidation } from "../../validation/editeContactValidation";
-import { ContactContext } from "../../context/ContactContext";
 import { initialValue } from "../../utils/formInitialValue";
-import { ModalContext } from "../../context/ModalContext";
+import { useEditeContact } from "../../hooks/useEditeContact.hook";
 
 export default function EditeContactsForm() {
-  const queryClient = useQueryClient();
-  const { contact } = useContext(ContactContext);
-  const { close } = useContext(ModalContext);
+  const { onSubmit, contact } = useEditeContact();
 
-  const mutation = useMutation({
-    mutationFn: (data: { id: string; contact: Partial<IContact> }) =>
-      contactsSevice.updateContact(data.id, data.contact),
-    onSuccess: () => queryClient.invalidateQueries("infinityContacts"),
-  });
-
-  const onSubmit = (value: Partial<IContact>) => {
-    if (contact.id) mutation.mutate({ id: contact.id, contact: value });
-    close();
-  };
   return (
     <Formik
       initialValues={initialValue}

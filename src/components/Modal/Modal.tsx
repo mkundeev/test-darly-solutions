@@ -1,5 +1,6 @@
 import React from "react";
 import * as Styled from "./Modal.styled";
+
 interface ModalProps {
   children: React.ReactNode;
   title?: string;
