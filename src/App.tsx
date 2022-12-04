@@ -10,6 +10,7 @@ import Modal from "./components/Modal";
 import { SPACES } from "./theam";
 import { MODAL } from "./const";
 import AddContactBtn from "./components/AddContactBtn";
+import { AnimatePresence } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 
 function App() {
@@ -26,16 +27,22 @@ function App() {
       )}
       {isLoading && <div>Loading...</div>}
       {isError && <div>Error</div>}
-      {modal === MODAL.add && (
-        <Modal title="Add contact" onClose={close}>
-          <AddContactsForm />
-        </Modal>
-      )}
-      {modal === MODAL.update && (
-        <Modal title="Update contact" onClose={close}>
-          <EditeContactsForm />
-        </Modal>
-      )}
+      <AnimatePresence
+        initial={false}
+        exitBeforeEnter={true}
+        onExitComplete={() => null}
+      >
+        {modal === MODAL.add && (
+          <Modal title="Add contact" onClose={close}>
+            <AddContactsForm />
+          </Modal>
+        )}
+        {modal === MODAL.update && (
+          <Modal title="Update contact" onClose={close}>
+            <EditeContactsForm />
+          </Modal>
+        )}
+      </AnimatePresence>
       <ReactTooltip effect="solid" arrowColor="transparent" place="bottom" />
     </Container>
   );

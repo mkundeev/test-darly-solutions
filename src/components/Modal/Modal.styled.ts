@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { COLORS, SPACES } from "../../theam";
 import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
+import { motion } from "framer-motion";
 
 export const CloseIcon = styled(CloseOutline)`
   position: absolute;
@@ -23,14 +24,15 @@ export const BackDrop = styled.div`
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
 `;
-export const Modal = styled.div`
+export const Modal = styled(motion.div)`
   position: absolute;
   top: ${SPACES.xxxl};
-  transform: translateX(-50%);
-  left: 50%;
+  /* transform: translateX(-50%);
+  left: 50%; */
   padding: ${SPACES.m} ${SPACES.xxxl};
   border-radius: 1rem;
-  min-height: 500px;
   background-color: ${COLORS.white};
 `;

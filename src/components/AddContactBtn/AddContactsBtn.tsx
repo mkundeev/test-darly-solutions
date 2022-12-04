@@ -6,8 +6,8 @@ interface IProps {
 }
 export default function AddContactsBtn({ onClick }: IProps) {
   return (
-    <div>
+    <Styled.Div whileHover={{ scale: 1.1 }}>
       <Styled.AddContactBtn onClick={onClick} data-tip="Add new contact" />
-    </div>
+    </Styled.Div>
   );
 }

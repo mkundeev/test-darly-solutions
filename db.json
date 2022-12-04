@@ -1,62 +1,6 @@
 {
   "contacts": [
     {
-      "id": "6",
-      "name": "Max",
-      "surname": "Smith",
-      "phone": "(111) 111-1111",
-      "email": "test2@mail.ua",
-      "status": "job",
-      "surename": "Max"
-    },
-    {
-      "id": "8",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "10",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "11",
-      "name": "Jhon",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "12",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "13",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "id": "14",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "15",
       "name": "Jhon",
       "surname": "Smith",
@@ -74,7 +18,7 @@
     },
     {
       "id": "17",
-      "name": "Jhon",
+      "name": "max",
       "surname": "Smith",
       "phone": "0936666666",
       "email": "test@test.com",
@@ -136,14 +80,6 @@
       "status": "friend"
     },
     {
-      "id": "25",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
       "id": "26",
       "name": "Jhon",
       "surname": "Smith",
@@ -168,22 +104,6 @@
       "status": "friend"
     },
     {
-      "id": "30",
-      "name": "Jhon",
-      "surname": "Smith",
-      "phone": "0936666666",
-      "email": "test@test.com",
-      "status": "friend"
-    },
-    {
-      "name": "Max",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test1@test.com",
-      "status": "job",
-      "id": "S2yPua-"
-    },
-    {
       "name": "max",
       "surename": "Max",
       "phone": "+38(063) 539-13-89",
@@ -192,28 +112,59 @@
       "id": "BNVIwMN"
     },
     {
-      "name": "Eden Clements",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test1@test.com",
-      "status": "",
-      "id": "K-l9XbO"
+      "id": "31",
+      "name": "Jhon",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
     },
     {
-      "name": "Max",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "test3@test.com",
-      "status": "job",
-      "id": "pQVOqXd"
+      "id": "32",
+      "name": "Jhon",
+      "surname": "Smith",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
     },
     {
-      "name": "MaxA",
-      "surename": "Max",
-      "phone": "+38(063) 539-13-89",
-      "email": "mkundeev@gmail.com",
-      "status": "test",
-      "id": "xp7GolL"
+      "id": "33",
+      "name": "Jhon",
+      "surname": "Smith",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
+    },
+    {
+      "id": "35",
+      "name": "Jhon",
+      "surname": "Smith",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
+    },
+    {
+      "id": "36",
+      "name": "Jhon",
+      "surname": "Smith",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
+    },
+    {
+      "id": "37",
+      "name": "Jhon",
+      "surname": "Smith",
+      "phone": "0936666666",
+      "email": "test@test.com",
+      "status": "friend"
+    },
+    {
+      "name": "Gage Finley",
+      "surename": "David Vazquez",
+      "phone": "+1 (867) 939-5442",
+      "email": "ropaxel@mailinator.com",
+      "status": "Consequat Sit dolor",
+      "id": "CbHKFr7"
     }
   ]
 }

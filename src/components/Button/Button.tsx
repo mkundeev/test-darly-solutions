@@ -13,7 +13,12 @@ export default function Button({
   disabled = false,
 }: IProps) {
   return (
-    <Styled.Button type={type} onClick={onClick} disabled={disabled}>
+    <Styled.Button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      whileHover={{ scale: 1.1 }}
+    >
       {title}
     </Styled.Button>
   );

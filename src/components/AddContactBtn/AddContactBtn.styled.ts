@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { AddCircle } from "@styled-icons/fluentui-system-regular";
 import { COLORS } from "../../theam";
+import { motion } from "framer-motion";
 
 export const AddContactBtn = styled(AddCircle)`
   height: 38px;
@@ -11,4 +12,9 @@ export const AddContactBtn = styled(AddCircle)`
     color: ${COLORS.white};
     background-color: ${COLORS.primary};
   }
+`;
+
+export const Div = styled(motion.div)`
+  height: fit-content;
+  width: fit-content;
 `;

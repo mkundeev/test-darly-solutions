@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { SPACES, COLORS, BUTTON, SHADOW } from "../../theam";
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   padding: 0 ${SPACES.m};
   height: ${BUTTON.height};
   min-width: ${BUTTON.minWith};
@@ -9,6 +10,7 @@ export const Button = styled.button`
   background-color: ${COLORS.white};
   border: 1px solid ${COLORS.black};
   box-shadow: ${SHADOW.button};
+  cursor: pointer;
   &:hover {
     background-color: ${COLORS.primary};
     color: ${COLORS.white};

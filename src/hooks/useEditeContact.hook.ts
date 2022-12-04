@@ -4,6 +4,7 @@ import { ContactContext } from "../context/ContactContext";
 import { useQueryClient, useMutation } from "react-query";
 import contactsSevice from "../apiService/contactsService";
 import { IContact } from "../types/data.types";
+import deleteProperty from "../utils/deleteProperty";
 export const useEditeContact = () => {
   const queryClient = useQueryClient();
   const { contact } = useContext(ContactContext);
@@ -16,7 +17,8 @@ export const useEditeContact = () => {
   });
 
   const onSubmit = (value: Partial<IContact>) => {
-    if (contact.id) mutation.mutate({ id: contact.id, contact: value });
+    const updateContact = deleteProperty(value);
+    if (contact.id) mutation.mutate({ id: contact.id, contact: updateContact });
     close();
   };
 
