@@ -7,6 +7,7 @@ import { addContactValidation } from "../../validation/addContactValidation";
 import { initialValue } from "../../utils/formInitialValue";
 import { useAddContact } from "../../hooks/useAddContact.hook";
 import { SPACES, FORM } from "../../theam";
+import * as Styled from "./AddContactsForm.styled";
 
 export default function AddContactsForm() {
   const { onSubmit } = useAddContact();
@@ -41,6 +42,9 @@ export default function AddContactsForm() {
                 disabled={!(props.isValid && props.dirty)}
               />
             </div>
+            <Styled.Required>
+              <Styled.Star>*</Styled.Star> required fields
+            </Styled.Required>
           </FlexContainer>
         </Form>
       )}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { IContact } from "../types/data.types";
+
 const URL = " http://localhost:3004/contacts";
 
 class ContactsSevice {
