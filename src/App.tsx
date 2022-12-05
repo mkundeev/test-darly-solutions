@@ -1,33 +1,47 @@
 import React, { useContext } from "react";
+import { AnimatePresence } from "framer-motion";
+import ReactTooltip from "react-tooltip";
+import { ToastContainer } from "react-toastify";
 import Container from "./components/Container";
 import FlexContainer from "./components/FlexContainer";
 import Table from "./components/Table";
 import AddContactsForm from "./components/AddContactsForm";
 import EditeContactsForm from "./components/Edite/EditeContactsForm";
+import Loader from "./components/Loader";
+import ErrorHandler from "./components/ErrorHandler";
+import Modal from "./components/Modal";
+import AddContactBtn from "./components/AddContactBtn";
 import { useApp } from "./hooks/useApp.hook";
 import { ModalContext } from "./context/ModalContext";
-import Modal from "./components/Modal";
 import { SPACES } from "./theam";
 import { MODAL } from "./const";
-import AddContactBtn from "./components/AddContactBtn";
-import { AnimatePresence } from "framer-motion";
-import ReactTooltip from "react-tooltip";
-import { ToastContainer } from "react-toastify";
 
 function App() {
-  const { contacts, isLoading, isError, fetchNextPage, openAddContact } =
-    useApp();
+  const {
+    contacts,
+    isLoading,
+    isError,
+    fetchNextPage,
+    openAddContact,
+    error,
+    hasNextPage,
+  } = useApp();
+
   const { modal, close } = useContext(ModalContext);
   return (
     <Container>
       {contacts && (
         <FlexContainer gap={SPACES.m}>
-          <Table data={contacts} fetchNextPage={fetchNextPage} />
+          <Table
+            data={contacts}
+            fetchNextPage={fetchNextPage}
+            hasNextPage={hasNextPage}
+          />
           <AddContactBtn onClick={openAddContact} />
         </FlexContainer>
       )}
-      {isLoading && <div>Loading...</div>}
-      {isError && <div>Error</div>}
+      {isLoading && <Loader />}
+      {isError && <ErrorHandler error={error} />}
       <AnimatePresence
         initial={false}
         exitBeforeEnter={true}

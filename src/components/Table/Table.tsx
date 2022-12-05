@@ -7,9 +7,10 @@ import * as Styled from "./Table.styled";
 interface IProps {
   data: IContact[];
   fetchNextPage(): void;
+  hasNextPage?: boolean;
 }
-export default function Table({ data, fetchNextPage }: IProps) {
-  const { containerRef } = useTable(data, fetchNextPage);
+export default function Table({ data, fetchNextPage, hasNextPage }: IProps) {
+  const { containerRef } = useTable(data, fetchNextPage, hasNextPage);
   return (
     <div>
       <Styled.Table>

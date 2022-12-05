@@ -6,6 +6,7 @@ import contactsSevice from "../apiService/contactsService";
 import { IContact } from "../types/data.types";
 import { MODAL, QUERY } from "../const";
 import { toast } from "react-toastify";
+
 export const useTableRow = (item: IContact) => {
   const queryClient = useQueryClient();
   const { open } = useContext(ModalContext);

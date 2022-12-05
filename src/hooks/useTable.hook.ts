@@ -2,16 +2,20 @@ import { useRef, useEffect, useMemo, useCallback } from "react";
 import { IContact } from "../types/data.types";
 import ReactTooltip from "react-tooltip";
 
-export const useTable = (data: IContact[], fetchNextPage: () => void) => {
+export const useTable = (
+  data: IContact[],
+  fetchNextPage: () => void,
+  hasNextPage?: boolean
+) => {
   const containerRef = useRef(null);
   const callBack = useCallback(
     (entries: any) => {
       const [entry] = entries;
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && hasNextPage) {
         fetchNextPage();
       }
     },
-    [fetchNextPage]
+    [fetchNextPage, hasNextPage]
   );
   const options = useMemo(
     () => ({

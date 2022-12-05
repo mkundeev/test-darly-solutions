@@ -1,7 +1,7 @@
 {
   "contacts": [
     {
-      "name": "Lael",
+      "name": "Max",
       "phone": "1-777-317-6531",
       "email": "purus.accumsan@icloud.com",
       "surname": "Holt",
@@ -343,22 +343,6 @@
       "surname": "Brooks",
       "id": "JOK92JDO8WG",
       "status": "Amet Risus Foundation"
-    },
-    {
-      "name": "Tatiana",
-      "phone": "1-371-818-1384",
-      "email": "sapien.aenean.massa@protonmail.ca",
-      "surname": "Preston",
-      "id": "QGR41OPK5PO",
-      "status": "At Augue Id Industries"
-    },
-    {
-      "name": "Max",
-      "surname": "Kundieiev",
-      "phone": "(111) 111-1111",
-      "email": "test3@test.com",
-      "status": "",
-      "id": "lsHuZsH"
     }
   ]
 }

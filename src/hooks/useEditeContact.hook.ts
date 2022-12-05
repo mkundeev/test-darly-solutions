@@ -7,6 +7,7 @@ import { IContact } from "../types/data.types";
 import deleteProperty from "../utils/deleteProperty";
 import { toast } from "react-toastify";
 import { QUERY } from "../const";
+
 export const useEditeContact = () => {
   const queryClient = useQueryClient();
   const { contact } = useContext(ContactContext);

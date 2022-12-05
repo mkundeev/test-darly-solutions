@@ -10,14 +10,15 @@ export const useApp = () => {
     queryFn: contactsSevice.getContactsLength,
   });
 
-  const { data, fetchNextPage, isLoading, isError } = useInfiniteQuery({
-    queryKey: QUERY.contacts,
-    queryFn: async ({ pageParam }) => contactsSevice.getContacts(pageParam),
-    getNextPageParam: (_, pages) => {
-      const hasNext = pages.length === lenght ? undefined : pages.length + 1;
-      return hasNext;
-    },
-  });
+  const { data, fetchNextPage, isLoading, isError, error, hasNextPage } =
+    useInfiniteQuery({
+      queryKey: QUERY.contacts,
+      queryFn: async ({ pageParam }) => contactsSevice.getContacts(pageParam),
+      getNextPageParam: (_, pages) => {
+        const hasNext = pages.length === lenght ? undefined : pages.length + 1;
+        return hasNext;
+      },
+    });
 
   const contacts = data?.pages.reduce(
     (acc, contact) => acc.concat(contact?.data),
@@ -28,5 +29,13 @@ export const useApp = () => {
     open(MODAL.add);
   };
 
-  return { contacts, isLoading, isError, fetchNextPage, openAddContact };
+  return {
+    contacts,
+    isLoading,
+    isError,
+    fetchNextPage,
+    openAddContact,
+    error,
+    hasNextPage,
+  };
 };
