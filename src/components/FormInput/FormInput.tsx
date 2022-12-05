@@ -8,11 +8,21 @@ interface IProps {
   name: string;
   title: string;
   info?: string;
+  required?: boolean;
 }
-export default function FormInput({ name, type, title, info }: IProps) {
+export default function FormInput({
+  name,
+  type,
+  title,
+  info,
+  required,
+}: IProps) {
   return (
     <FlexContainer flexDirection="column">
-      <Styled.Label htmlFor={name}>{title}</Styled.Label>
+      <Styled.Label htmlFor={name}>
+        {title}
+        {required && <Styled.Required>*</Styled.Required>}
+      </Styled.Label>
       {info && <Styled.Info>{info}</Styled.Info>}
       <Styled.Input name={name} type={type} id={name} />
       <ErrorMessage

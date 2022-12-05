@@ -29,10 +29,10 @@ export default function AddContactsForm() {
             alignItems="center"
             width={FORM.formWidth}
           >
-            <FormInput name="name" title="Name" type="text" />
-            <FormInput name="surename" title="Surename" type="text" />
-            <FormInput name="phone" title="Phone number" type="tel" />
-            <FormInput name="email" title="Email" type="email" />
+            <FormInput name="name" title="Name" type="text" required />
+            <FormInput name="surname" title="Surname" type="text" required />
+            <FormInput name="phone" title="Phone number" type="tel" required />
+            <FormInput name="email" title="Email" type="email" required />
             <FormInput name="status" title="Status" type="text" />
             <div>
               <Button

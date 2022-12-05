@@ -6,10 +6,10 @@ export const addContactValidation = Yup.object({
       "Name may contain only letters, apostrophe, dash and spaces"
     )
     .required("Required"),
-  surename: Yup.string()
+  surname: Yup.string()
     .matches(
       /(^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$)/,
-      "Surename may contain only letters, apostrophe, dash and spaces"
+      "Surname may contain only letters, apostrophe, dash and spaces"
     )
     .required("Required"),
   phone: Yup.string()

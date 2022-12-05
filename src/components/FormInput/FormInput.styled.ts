@@ -15,3 +15,6 @@ export const Input = styled(Field)`
 export const Info = styled.p`
   margin-bottom: ${SPACES.s};
 `;
+export const Required = styled.span`
+  color: ${COLORS.error};
+`;

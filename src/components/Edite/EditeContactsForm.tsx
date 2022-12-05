@@ -36,10 +36,10 @@ export default function EditeContactsForm() {
               info={contact.name}
             />
             <FormInput
-              name="surename"
-              title="Surename"
+              name="surname"
+              title="Surname"
               type="text"
-              info={contact.surename}
+              info={contact.surname}
             />
             <FormInput
               name="phone"

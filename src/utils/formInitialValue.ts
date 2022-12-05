@@ -1,6 +1,6 @@
 export const initialValue = {
   name: "",
-  surename: "",
+  surname: "",
   phone: "",
   email: "",
   status: "",

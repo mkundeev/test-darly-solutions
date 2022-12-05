@@ -16,7 +16,7 @@ export default function Table({ data, fetchNextPage }: IProps) {
         <Styled.TableHeade>
           <tr>
             <th>Name</th>
-            <th>Surename</th>
+            <th>Surname</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Status</th>
