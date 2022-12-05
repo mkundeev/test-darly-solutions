@@ -7,11 +7,6 @@ class ContactsSevice {
     const results = await axios.get(`${URL}?_page=${page}`);
     return results;
   }
-  async getContactsLength() {
-    const results = await axios.get(URL);
-    return Math.ceil(results.data.length / 10);
-  }
-
   async addContact(body: Omit<IContact, "id">) {
     const results = await axios.post(URL, body);
     return results;
