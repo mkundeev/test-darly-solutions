@@ -1,5 +1,5 @@
-start application - npm start (localhost 3000)  
-start server - json-server --watch db.json (localhost 3004)
+start application(localhost 3000) - npm start   
+start server(localhost 3004) - json-server --watch db.json 
 
 Used libraries:
 - React Query - server state manager;
