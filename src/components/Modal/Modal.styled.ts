@@ -20,7 +20,7 @@ export const Title = styled.h2`
   margin-bottom: ${SPACES.m};
 `;
 
-export const BackDrop = styled.div`
+export const BackDrop = styled(motion.div)`
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -30,8 +30,6 @@ export const BackDrop = styled.div`
 export const Modal = styled(motion.div)`
   position: absolute;
   top: ${SPACES.xxxl};
-  /* transform: translateX(-50%);
-  left: 50%; */
   padding: ${SPACES.m} ${SPACES.xxxl};
   border-radius: 1rem;
   background-color: ${COLORS.white};

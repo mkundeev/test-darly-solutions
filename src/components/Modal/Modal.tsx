@@ -1,5 +1,5 @@
 import React from "react";
-import { flip } from "../../utils/modalAnimation";
+import { fade, flip } from "../../utils/modalAnimation";
 import * as Styled from "./Modal.styled";
 
 interface ModalProps {
@@ -9,7 +9,13 @@ interface ModalProps {
 }
 export default function Modal({ children, title, onClose }: ModalProps) {
   return (
-    <Styled.BackDrop onClick={onClose}>
+    <Styled.BackDrop
+      onClick={onClose}
+      variants={fade}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Styled.Modal
         onClick={(e) => e.stopPropagation()}
         variants={flip}
