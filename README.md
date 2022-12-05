@@ -1,7 +1,7 @@
-start application - npm start
+start application - npm start  
 start server - json-server --watch db.json
 
-Used libreries:
+Used libraries:
 - React Query - server state manager;
 - Axios - http request;
 - Formik - forms;
